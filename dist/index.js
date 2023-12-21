@@ -5,11 +5,17 @@ const nx_remotecache_custom_1 = require("nx-remotecache-custom");
 exports.default = (0, nx_remotecache_custom_1.createCustomRunner)(async (options) => {
     // initialize environment variables from dotfile
     (0, nx_remotecache_custom_1.initEnv)(options);
-    return new GCPStorage(options);
+    const storage = new GCPStorage(options);
+    return {
+        name: storage.name,
+        fileExists: (filename) => storage.fileExists(filename),
+        storeFile: (filename, data) => storage.storeFile(filename, data),
+        retrieveFile: (filename) => storage.retrieveFile(filename)
+    };
 });
 class GCPStorage {
     constructor(options) {
-        this.name = 'nx-remotecache-gcp';
+        this.name = 'GCP Storage';
         const projectId = options.project_id || process.env.NXCACHE_GOOGLE_STORAGE_PROJECT_ID;
         const clientEmail = options.client_email || process.env.NXCACHE_GOOGLE_STORAGE_CLIENT_EMAIL;
         const privateKey = options.private_key || process.env.NXCACHE_GOOGLE_STORAGE_PRIVATE_KEY;

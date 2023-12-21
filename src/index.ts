@@ -16,11 +16,18 @@ interface GCSRunnerOptions {
 export default createCustomRunner<GCSRunnerOptions>(async (options): Promise<RemoteCacheImplementation> => {
     // initialize environment variables from dotfile
     initEnv(options);
-    return new GCPStorage(options);
+    const storage =  new GCPStorage(options);
+
+    return {
+        name: storage.name,
+        fileExists: (filename) => storage.fileExists(filename),
+        storeFile: (filename, data) => storage.storeFile(filename, data),
+        retrieveFile: (filename) => storage.retrieveFile(filename)
+    }
 });
 
 class GCPStorage implements RemoteCacheImplementation {
-    readonly name = 'nx-remotecache-gcp';
+    readonly name = 'GCP Storage';
 
     private readonly bucket: Bucket;
 
