@@ -1,5 +1,5 @@
 {
-  "name": "nx-remotecache-gcp",
+  "name": "nx-remotecache-google",
   "version": "1.0.0",
   "repository": "https://github.com/ydomenjoud/nx-remotecache-gcp.git",
   "description": "Remote caching for @nrwl/nx using Google Cloud Storage",

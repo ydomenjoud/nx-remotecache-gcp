@@ -1,9 +1,9 @@
-[![npm package link](https://img.shields.io/npm/v/nx-remotecache-gcp)](https://www.npmjs.com/package/nx-remotecache-gcp)
+[![npm package link](https://img.shields.io/npm/v/nx-remotecache-google)](https://www.npmjs.com/package/nx-remotecache-google)
 
-# nx-remotecache-gcp
+# nx-remotecache-google
 
-A task runner for [@nrwl/nx](https://nx.dev) that uses an Google Cloud Storage as a remote cache. 
-This enables all team members and CI servers to share a single cache. 
+A task runner for [@nrwl/nx](https://nx.dev) that uses an Google Cloud Storage as a remote cache.
+This enables all team members and CI servers to share a single cache.
 The concept and benefits of [computation caching](https://nx.dev/angular/guides/computation-caching) are explained in the NX documentation.
 
 This package was built with [nx-remotecache-custom](https://www.npmjs.com/package/nx-remotecache-custom) 🙌
@@ -19,7 +19,7 @@ This package was built with [nx-remotecache-custom](https://www.npmjs.com/packag
 ## Setup
 
 ```
-npm install --save-dev nx-remotecache-gcp
+npm install --save-dev nx-remotecache-google
 ```
 
 | Parameter   | Description                          | Environment Variable / .env           | `nx.json`      |
@@ -33,7 +33,7 @@ npm install --save-dev nx-remotecache-gcp
 {
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx-remotecache-gcp",
+      "runner": "nx-remotecache-google",
       "options": {
         // All of the gcp specific options can also be inserted via environment variables! ⬆️
         "private_key": "-----BEGIN PRIVATE KEY-----\n.........\n-----END PRIVATE KEY-----",
@@ -89,8 +89,8 @@ File: 1679426766935461636258771.tar.gz
 
 ## All Custom Runners
 
-| Runner                                                                     | Storage              |
-|----------------------------------------------------------------------------|----------------------|
-| [nx-remotecache-azure](https://www.npmjs.com/package/nx-remotecache-azure) | Azure Blob Storage   |
-| [nx-remotecache-minio](https://www.npmjs.com/package/nx-remotecache-minio) | MinIO Storage        |
-| [nx-remotecache-gcp](https://www.npmjs.com/package/nx-remotecache-gcp)     | Google Cloud Storage |
+| Runner                                                                       | Storage              |
+|------------------------------------------------------------------------------|----------------------|
+| [nx-remotecache-azure](https://www.npmjs.com/package/nx-remotecache-azure)   | Azure Blob Storage   |
+| [nx-remotecache-minio](https://www.npmjs.com/package/nx-remotecache-minio)   | MinIO Storage        |
+| [nx-remotecache-google](https://www.npmjs.com/package/nx-remotecache-google) | Google Cloud Storage |
