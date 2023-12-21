@@ -1,0 +1,31 @@
+{
+  "name": "nx-remotecache-gcp",
+  "version": "1.0.0",
+  "repository": "https://github.com/ydomenjoud/nx-remotecache-gcp.git",
+  "description": "Remote caching for @nrwl/nx using Google Cloud Storage",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nx",
+    "remote-cache",
+    "gcp",
+    "gcs",
+    "google-storage"
+  ],
+  "author": "ydomenjoud",
+  "license": "ISC",
+  "dependencies": {
+    "nx": "^17.0.0",
+    "@google-cloud/storage": "^7.7.0",
+    "nx-remotecache-custom": "^17.0.0"
+  },
+  "peerDependencies": {
+    "nx": "^17.0.0"
+  }
+}
