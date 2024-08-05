@@ -8,13 +8,12 @@ The concept and benefits of [computation caching](https://nx.dev/angular/guides/
 
 This package was built with [nx-remotecache-custom](https://www.npmjs.com/package/nx-remotecache-custom) 🙌
 
-## Compatability
+## Compatibility
 
-|  Nx               | Remote Cache     |
-| ----------------- | ---------------- |
-|  `>= 17.0.0 < 18` | `>= 17.0.0 < 18` |
-|  `>= 16.9.0 < 17` | `>= 5.0.0 < 17`  |
-|  `< 16.9.0`       | `< 5.0.0`        |
+|  Nx               | nx-remotecache-google |
+| ----------------- |---------------------|
+|  `>= 19.0.0 < 20` | `= 1.1.0`           |
+|  `>= 17.0.0 < 18` | `= 1.0.0`           |
 
 ## Setup
 
